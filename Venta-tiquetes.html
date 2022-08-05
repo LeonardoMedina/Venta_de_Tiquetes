@@ -1,49 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GoodTravel - Viajando a otro nivel</title>
-    <h1><p style="text-align:center"><u><b>MasterTicket</b></u></p></h1>
-    
-</head>
-<body>
-        <img src="imagen.png">  
-        <form>
-        <h5>Elige ciudad de orígen:</h5>
-        <select id="Ciudad de orígen">
-            <option value="Seleccione su ciudad de orígen">Seleccione su ciudad de orígen...</option>
-            <option value="Lima">Lima</option>
-            <option value="Cusco">Cusco</option>
-            <option value="Ica">Ica</option>    
-            <option value="Ancash">Ancash</option>
-            <option value="Arequipa">Arequipa</option>
-            <option value="Lambayeque">Lambayeque</option>
-            <option value="Junín-Huancayo">Junín-Huancayo</option>
-            <option value="Puno">Puno</option>
-            <option value="Loreto">Loreto</option>
-            <option value="Piura">Piura</option>
-        </select>
+  </head>
+  <body>
+    <h1><!-- El contenido de las paginas, siempre deben ir en el body y no en el head-->
+      <p style="text-align: center">
+        <u>
+          <strong>MasterTicket</strong>
+        </u>
+      </p>
+    </h1>
 
-        <h5>Elige ciudad de destino:</h5>
-        <select id="Ciudad de destino">.
-            <option value="Seleccione su ciudad de destino">Seleccione su ciudad de destino...</option>
-            <option value="Lima">Lima</option>
-            <option value="Cusco">Cusco</option>
-            <option value="Ica">Ica</option>    
-            <option value="Ancash">Ancash</option>
-            <option value="Arequipa">Arequipa</option>
-            <option value="Lambayeque">Lambayeque</option>
-            <option value="Junín-Huancayo">Junín-Huancayo</option>
-            <option value="Puno">Puno</option>
-            <option value="Loreto">Loreto</option>
-            <option value="Piura">Piura</option>
-        </select>
+    <img src="imagen.png" />
+
+    <form id="frm" action="javascript: comprartiquetes()">
+      <h5>Elige ciudad de orígen:</h5>
+      <select id="slcCiudadOrigen" required><!-- Los ID no pueden tener espacio-->
+        <option value="" disabled selected>
+          Seleccione su ciudad de orígen...
+        </option>
+      </select>
+
+      <h5>Elige ciudad de destino:</h5>
+      <select id="slcCiudadDestino" required>
+        <option value="" disabled selected>
+          Seleccione su ciudad de destino...
+        </option>
+      </select>
+      <button type="submit">Siguiente</button>
     </form>
-</br>
-</br>
+    <script src="main.js"></script>
     <script src="Venta-tiquetes.js"></script>
-    <button onclick="comprartiquetes()">Siguiente</button>
-</body>
+  </body>
 </html>
